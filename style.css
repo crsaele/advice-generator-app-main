@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+:root {
+  --lightCyan: hsl(193, 38%, 86%);
+  --manrope: "Manrope", sans-serif;
+  --neonGreen: hsl(150, 100%, 66%);
+  --grayishBlue: hsl(217, 19%, 38%);
+  --darkGrayishBlue: hsl(217, 19%, 24%);
+  --darkBlue: hsl(218, 23%, 16%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--manrope);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: var(--darkBlue);
+}
+
+main {
+  display: grid;
+  grid: max-content 2rem / 1fr;
+}
+
+blockquote {
+  text-align: center;
+  font-size: 28px;
+  color: var(--lightCyan);
+  /* Top right bottom left */
+  margin: 20px 0 10px 0;
+  font-weight: 800;
+}
+
+blockquote h2 {
+  font-size: 14px;
+  color: var(--neonGreen);
+  font-weight: 400;
+}
+
+img {
+  /* Top right bottom left */
+  margin: 20px 0 20px 0;
+}
+
+.divider {
+  background-image: url("images/pattern-divider-desktop.svg");
+  background-repeat: no-repeat;
+  /* Allows the image to exist */
+  height: 20px;
+  /* Top right bottom left */
+  margin: 30px 0 0 0;
+}
+
+.button {
+  background-color: var(--neonGreen);
+  width: 4rem;
+  height: 4rem;
+  bottom: -30px; 
+  left: calc(50% - 2rem);
+  border: none;
+  /* Relative to the card */
+  position: relative;
+  border-radius: 50%;
+  transition: box-shadow 0.3s ease;
+}
+
+.button:hover {
+  /* Makes shadows of neon green in all directions */
+  box-shadow: 0 0 10px var(--neonGreen), 0 0 20px var(--neonGreen), 0 0 30px var(--neonGreen);
+  cursor: pointer;
+}
+
+.card {
+  /* Top right bottom left */
+  padding: 45px 45px 0 45px;
+  width: 540px;
+  background-color: var(--darkGrayishBlue);
+  border-radius: 15px;
+}
+
+
+/* MOBILE DESIGN */
+
+@media only screen and (max-width: 520px) {
+
+  .card {
+    width: 400px;
+  }
+
+  .divider {
+    background-image: url("images/pattern-divider-mobile.svg");
+  }
+
+}
